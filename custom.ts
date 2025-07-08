@@ -3,16 +3,9 @@
 * Blocs personnalisés pour MaqueenPlusV2 by Planète Sciences Occitanie
 */
 
-enum MyEnum {
-    //% block="one"
-    One,
-    //% block="two"
-    Two
-}
 
-
-//% weight=100 color=#0fbc11 icon=""
 //% groups=['Instructions générales', 'Déplacement du robot', 'Détection de l'environnement', 'LEDs', 'Caméra IA']
+//% weight=100 color=#0fbc11 icon="\uf085"
 namespace Planete {
 
     //Motor selection enumeration
@@ -39,7 +32,7 @@ namespace Planete {
         Superieur,
         //%block="<"
         Inferieur,
-    }
+    };
 
     //Line sensor selection
     export enum MyEnumLineSensor {
@@ -160,7 +153,7 @@ namespace Planete {
     for (let i = 0; i < 16 * 3; i++) {
         neopixel_buf[i] = 0
     }
-    let _brightness = 255
+    let _brightness = 255;
 
 
 
@@ -207,9 +200,9 @@ namespace Planete {
 
 
     /**
- * Déplacement robot avant/arrière 
- * @param edir   Motor direction selection enumeration
- */
+     * Déplacement robot avant/arrière 
+     * @param edir   Motor direction selection enumeration
+     */
 
     //% block="Se déplacer %edir à la vitesse %speed" group="Déplacement du robot"
     //% weight=99
@@ -321,13 +314,13 @@ namespace Planete {
 
 
     /**
-        * Durée d'action
-        * @param duree durée pendant laquelle l'action précédente va être exécutée
-        */
+    * Durée d'action
+    * @param duree durée pendant laquelle l'action précédente va être exécutée
+    */
 
     //% block="pendant %duree millisecondes" group="Instructions générales"
     //% weight=99
-     export function pause(duree: number): void {
+    export function pause(duree: number): void {
         basic.pause(duree);
     }
 
@@ -474,9 +467,9 @@ namespace Planete {
     }
 
     /**
-        * Turn off all RGB LEDs
-        * eg: DigitalPin.P15
-        */
+    * Turn off all RGB LEDs
+    * eg: DigitalPin.P15
+    */
 
     //% weight=40
     //% block="Éteindre les 4 LEDS" group="LEDs"
@@ -486,7 +479,6 @@ namespace Planete {
     }
 
 }
-
 
 
 enum Content1 {
